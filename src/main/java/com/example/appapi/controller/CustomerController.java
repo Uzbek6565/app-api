@@ -60,7 +60,7 @@ public class CustomerController {
      * receives ID and CustomerDto as json object from route
      */
     @PutMapping("/{id}")
-    public Result edit(@PathVariable Integer id, @RequestBody CustomerDto customerDto){
+    public Result edit(@PathVariable Integer id, @Valid @RequestBody CustomerDto customerDto){
         return customerService.edit(id, customerDto);
     }
 
